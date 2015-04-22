@@ -7,7 +7,12 @@ get('/') do
   erb(:index)
 end
 
-get('/score') do
-  @score = params.fetch('word').scrabble()
-  erb(:score)
+get('/winner') do
+  @winner = params.fetch(win)
+  erb(:winner)
+end
+
+get('/index') do
+  @winner = params.fetch("hand1").beats()
+  erb(:index)
 end

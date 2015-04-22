@@ -14,13 +14,13 @@ class String
 
 
       if result == "R"
-        "Rock Wins!"
+        win = "Rock Wins!"
       elsif result == "S"
-        "Scissors Wins"
+        win = "Scissors Wins"
       elsif result == "P"
-        "Paper Wins"
+        win = "Paper Wins"
       else result == "1"
-        "Tied!"
+        win = "Tied!"
 
     end
   end
