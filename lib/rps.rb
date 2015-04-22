@@ -1,34 +1,18 @@
 class String
-  define_method(:scrabble) do
+  define_method(:beats) do
+      player1 = self
+      player2 = "rock"
 
-  score = 0
+      p1 = player1[0].upcase()
+      p2 = player2[0].upcase()
 
-  wordarray = self.split("")
-  wordarray.each() do |letter|
-    if letter.==("a")|letter.==("e")|letter.==("i")|letter.==("o")|letter.==("u")|letter.==("l")|letter.==("n")|letter.==("r")|letter.==("s")|letter.==("t")
-      score = score + 1
-    elsif letter.==("d")|letter.==("g")
-      score = score + 2
-    elsif letter.==("b")|letter.==("c")|letter.==("m")|letter.==("p")
-      score = score + 3
-    elsif letter.==("f")|letter.==("h")|letter.==("v")|letter.==("w")|letter.==("y")
-      score = score + 4
-    elsif letter.==("k")
-      score = score + 5
-    elsif letter.==("j")|letter.==("x")
-      score = score + 8
-    elsif letter.==("q")|letter.==("z")
-      score = score + 10
-    else
-      "0"
-    end
+      game = p1 + p2
+
+      rules = Hash.new(0)
+      rules = {"PR"=>"R","PS"=>"S", "RS"=>"R", "PP"=>"1","RR"=>"1","SS"=>"1"}
+
+      result = rules.fetch(game)
+      result
+
   end
-  score
 end
-end
-
-#1point = [A, E, E]
-#2point = [asdfl;kj]
-
-#word.each() do |letter|
-#if 1.include?(le
